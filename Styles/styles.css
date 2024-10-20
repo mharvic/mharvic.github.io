@@ -425,6 +425,17 @@ display: flex;
   color: white;
 }
 
+.fa-file {
+  background:#00CC8F;
+  color: white;
+}
+
+.fa-envelope {
+  background-color: #00CC8F;
+  color: white;
+  margin-top:10px;
+}
+
 
 
 @media only screen and (max-width: 768px) {
