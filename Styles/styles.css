@@ -10,32 +10,30 @@ header {
   background-color: #21232c;
   color: #fff;
   text-align: center;
+  padding: 50px 40px 50px 40px;
 }
 
 .nav {
-  margin-top:65px;
-}
-
-.menu-nav {
+  flex: 1;
   display:flex;
-  justify-content: space-between;
-  padding: 80px;
-  max-width: 1200px;
-  margin: auto;
+  justify-content: flex-end;
+  align-items:center;
 }
 
 nav a.active{
   background-color:#00cc8f;
 }
 
-.logo {
+.logo{
+  flex:1;
+  display:flex;
+}
+
+.logo-img {
   width: 150px;
   height: 150px;
-  float:left;
-}
-    
-.row .logo {
-  float:left;
+  padding:10px;
+  
 }
 
 nav li{
@@ -53,7 +51,7 @@ nav ul {
 nav a {
   border-radius: 5px;
   color: white;
-  padding: 1em;
+  padding: 15px 15px 15px 15px;
   text-decoration: none;
 }
 
@@ -133,43 +131,16 @@ body {
   margin: auto;
 }
 
-.row {
-  display: flex;
-  margin: auto;
-  padding: 100px 40px 100px 40px;
-  align-items: center;
-  background-color: #21232c;
-  max-width:1200px;
-}
-
-.about{
-  line-height: 1.3;
-  background-color: #2B2E3B;
-  margin: auto;
-  display:flex;
-  justify-content: space-between;
-  padding: 100px 40px 100px 40px;
-  }
-
-.row-about {
-  display: flex;
-  margin: auto;
-  align-items: center;
-  background-color: #2B2E3B;
-  max-width: 1200px;
-}
-
 .partners {
   line-height: 1.3;
   background-color: #21232c;
   text-align:center;
-  padding: 100px 40px 100px 40px;
+  padding: 50px 40px 50px 40px;
 }
 
 .row-partners {
   display:flex;
   margin: auto;
-  padding: 20px 20px 20px 20px;
   justify-content: center;
 }
 
@@ -203,40 +174,75 @@ div.desc {
 
 /* <!-- End --!> */
 
-.column {
-  flex: 50%;
-  display:flex;
-  align-items: center;
-  
-}
-
-.column-image {
-  flex: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .homedp {
   width:400px;
   height:400px;
-  float:right;
 }
 
 .row span {
   color: #00cc8f;
 }
 
-.row .cyclone {
-  float: left;
+.some-page-wrapper {
+  background: #21232C;
+  padding: 50px 40px 70px 40px;
 }
+
+.about-page-wrapper{
+  background: #2B2E3B;
+  padding: 50px 40px 50px 40px;
+}
+
+.aboutme-page-wrapper{
+  background: #21232C;
+  padding: 50px 40px 50px 40px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: center;
+  margin:auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  justify-content: center;
+  flex: 1;
+}
+
+.intro-column {
+  height: 100%;
+}
+
+.img-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:100%;
+}
+
+.partners .img{
+  width:200px;
+  height:200px;
+}
+
 
 /* About Page */
 
-.education-column {
-  flex: 50%;
-  display:flex;
-  align-items: center;
+.education-page-wrapper{
+  background: #2B2E3B;
+  padding: 50px 40px 50px 40px;
+}
+
+.hobbies-page-wrapper{
+  background: #21232C;
+  padding: 50px 40px 50px 40px;
 }
 
 .education {
@@ -245,47 +251,16 @@ div.desc {
   padding: 100px 40px 100px 40px;
 }
 
-.education-info {
-  display:flex;
-  margin: auto;
-  padding: 20px 20px 20px 20px;
-  justify-content: center;
-  max-width: 1200px;
-}
-
 /* Table Properties */
 
-.year {
-  width:100px;
+table {
+  width: 100%;
+  border: 1px solid #fff;
 }
 
-.table_component {
-  overflow-x: auto;
-  width: 100%;
-}
-
-.table_component table {
-  border: 1px solid #dededf;
-  height: 100%;
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border-spacing: 1px;
+th, td {
   text-align: left;
-}
-
-.table_component th {
-  border: 1px solid #dededf;
-  background-color: #00C286;
-  color: #e5e7eb;
-  padding: 10px;
-}
-
-.table_component td {
-  border: 1px solid #dededf;
-  background-color: #ffffff;
-  color: #6b7280;
-  padding: 10px;
+  padding: 8px;
 }
 
 /* Hobbies Section */
@@ -295,14 +270,10 @@ div.desc {
   margin: auto;
 }
 
-.hobbies-info {
-display: flex;
-  margin: auto;
-  padding: 100px 40px 100px 40px;
-  align-items: center;
-  background-color: #21232c;
-  max-width:1200px;
+.hobbies-column{
+
 }
+
 
 /* Projects */
 .project-gallery {
@@ -320,6 +291,7 @@ display: flex;
 .project-gallery img {
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 
 .project-desc {
@@ -332,16 +304,34 @@ display: flex;
 
 /* Contact Section */
 
-.column-c {
-  flex: 33.33%;
-  display:flex;
-  align-items: center;
-  
+.contact-page-wrapper{
+  background: #21232C;
+  padding: 75px 40px 75px 40px;
 }
 
 
 /* Footer */
 
+.footer-page-wrapper{
+  line-height: 1.3;
+  background-color: #2B2E3B;
+  padding: 50px 40px 50px 40px;
+  margin: auto;
+}
+
+.footer-logo{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height:100%;
+}
+
+.footer-info{
+
+}
+.footer-follow{
+
+}
 .footer{
   line-height: 1.3;
   background-color: #2B2E3B;
@@ -354,10 +344,6 @@ display: flex;
   margin: auto;
   }
 
-.footer-column {
-  float: left;
-  width: 33.33%;
-}
 
 .footer-info:after {
   content: "";
@@ -436,30 +422,233 @@ display: flex;
   margin-top:10px;
 }
 
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
 
 
 @media only screen and (max-width: 768px) {
-  .row{
-    display:flex;
-    flex-direction:column;
-  }
-  .column-image {
-    margin-top:100px;
-  }
 
-  .row-about{
-    display:flex;
-    flex-direction:column;
+  .row h1{
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4rem;
   }
-  .hobbies-info{
-    display:flex;
-    flex-direction:column;
+  .img-work{
+    height: 250px;
+    width: 300px;
+  }
+  .homedp{
+    width:275px;
+    height:275px;
+   }
+  .img-column{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
   }
   .project-gallery{
     width:100%;
   }
+
 }
 
-@media only screen and (max-width: 600px) {
-   
+@media only screen and (max-width: 600){
+   table, thead, tbody, th, td, tr {
+      display: block;
+  }
+
+  thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  tr {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+  }
+
+  td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+  }
+
+  td:before {
+      position: absolute;
+      left: 6px;
+      content: attr(data-label);
+      font-weight: bold;
+}
+}
+
+@media only screen and (max-width: 320px) {
+    nav a {
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+  }
+  .menu-nav{
+    flex-direction:column;
+    }
+    .menu-nav{
+      padding: 20px;
+    }
+
+   .row h1{
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4rem;
+   }
+
+   .partners h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height:1.5em;
+    font-size:3rem;
+    text-align:left;
+   }
+
+   img.homedp{
+    width:250px;
+    height:250px;
+   }
+   .img-work{
+    width:250px;
+    height:250px;
+   }
+   .about{
+    padding: 50px 20px 50px 20px;
+   }
+.menu-nav .img{
+    width:150px;
+    height:150px;
+  }
+.nav ul{
+    display: block;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+.nav {
+    flex: 1;
+    display: block;
+    justify-content: flex-end;
+    align-items: center;
+  }
+.logo{
+  display: block;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0; 
+}
+.nav li{
+  margin-top:15px;
+}
+.row-partners {
+    display:flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction:column;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 230px;
+  text-align:center;
+}
+.footer-page-wrapper{
+  padding:50px 40px 50px 40px;
+}
+
+  .footer-logo{
+
+}
+  .footer-info{
+
+ }
+  .footer-follow{
+    padding-bottom: 40px;
+ }
+ .intro-column{
+
+ }
+ .about-column{
+  padding-bottom:50px;
+ }
+ .img-column{
+  padding-top:20px;
+ }
+ .table_component{
+  overflow-x:scroll;
+ }
+ .contact-info{
+  width:200px;
+ }
+ .table_component{
+  width:100%;
+  overflow-x:auto;
+ }
+ table, thead, tbody, th, td, tr {
+      display: block;
+  }
+
+  thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  tr {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+  }
+
+  td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+  }
+
+  td:before {
+      position: absolute;
+      left: 6px;
+      content: attr(data-label);
+      font-weight: bold;
+}
+table {
+  width: 100%;
+  border: 0px;
+}
+
+.table td{
+  border: none;
+  position: relative;
+  padding:10px;
+}
+
+h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 4rem;
+    font-size: 3rem;
+}
+.bullet{
+  margin-top:40px;
+}
 }
