@@ -213,6 +213,13 @@ div.desc {
   text-align: center;
 }
 
+#numbers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left:10px;
+}
+
 /* <!-- End --!> */
 
 .homedp {
@@ -693,5 +700,13 @@ h2{
 }
 .bullet{
   margin-top:40px;
+}
+
+#numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10px;
+  flex-direction: column;
 }
 }
