@@ -385,6 +385,7 @@ footer .container{
         flex-direction: column;
         height: 100%;
         padding: 50px 20px;
+        gap: 2rem;
     }
 
     .navbar .container{
@@ -424,7 +425,7 @@ footer .container{
         max-width:300px;
     }
 
-    .about .container{
+    #about .container{
         flex-direction:column;
         padding: 50px 20px;
     }
