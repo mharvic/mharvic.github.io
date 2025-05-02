@@ -359,6 +359,16 @@ footer .container{
 }
 
 @media screen and (max-width:768px){
+
+    .navbar .container{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .button-hire{
+        margin-top:1rem;
+    }
+
     #header .container{
         flex-direction: column;
         padding: 60px 40px;
@@ -369,6 +379,17 @@ footer .container{
     .boxes .container {
         height:100%;
         padding: 60px 40px;
+    }
+
+    #about .container{
+        flex-direction: column;
+    }
+    #services .boxes{
+        flex-direction:column;
+    }
+
+    .projects-container{
+       grid-column: span 2;
     }
 }
 
